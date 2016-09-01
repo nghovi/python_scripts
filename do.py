@@ -55,6 +55,41 @@ def qk_localize_text(file_en, file_jp):
     fin.close()
     fin_ja.close()
 
+#todo: if string has some special character like ",', !, @, etc...
+# def qk_generate_string(file_xml, file_str):
+#     """Generate string id from xml file into strings.xml
+#         for both en, jp
+
+#     """
+#     fin_xml = open(file_xml, 'r+')
+#     fin_str = open(file_str, 'r+')
+#     list_xml_string = fin_xml.readlines()
+#     new_strings = []
+#     base = 0
+#     for line_i in list_xml_string:
+#         if  re.search('android:text="', line_i) && not re.search('text="@':, line_i): #search string that hasn't got string id yet
+#             str_value = line_i[line_i.index('text="') + 6 : line_i.index('"')]
+#             base++
+#             new_string = _create_str_key_val(base, file_xml, str_value)
+#             new_strings.append(new_string)
+    
+#     while(str_key = fin_str.readline()):
+#         if (re.search('</resource>')):
+#             for new_string in new_strings:
+#                 fin_str.write(new_string)
+#             break
+
+#     fin_xml.close
+#     fin_str.close
+
+
+# return something like
+# todo better suffix
+# <string name="k1101_txt_btn"></string>
+def _create_str_key_val(base, file_xml, str_value):
+    suffix = base + int(time.time())
+    return '<string name="' + file_xml + '_' + suffix + '">' + str_value + '</string>'
+
 def replace_text(folder_path):
     from glob import glob
     from os.path import isfile, sep
@@ -111,9 +146,8 @@ def show_services():
             print 'Your choice is  in database!'
 
 if __name__ == '__main__':
-    # show_services()
-    qk_localize_text('D:\projects\Quicker-adr\quicker-cl-adr\src\main\\res\\values\strings.xml', 'D:\projects\Quicker-adr\quicker-cl-adr\src\main\\res\\values-ja\strings.xml')
-    qk_localize_text('D:\projects\Quicker-adr\quicker-cs-adr\src\main\\res\\values\strings.xml', 'D:\projects\Quicker-adr\quicker-cs-adr\src\main\\res\\values-ja\strings.xml')
-
+     show_services()
+    # qk_localize_text('D:\projects\Quicker-adr\quicker-cl-adr\src\main\\res\\values\strings.xml', 'D:\projects\Quicker-adr\quicker-cl-adr\src\main\\res\\values-ja\strings.xml')
+    # qk_localize_text('D:\projects\Quicker-adr\quicker-cs-adr\src\main\\res\\values\strings.xml', 'D:\projects\Quicker-adr\quicker-cs-adr\src\main\\res\\values-ja\strings.xml')
     # qk_localize_text_cs()
     # qk_standardize_dimens()

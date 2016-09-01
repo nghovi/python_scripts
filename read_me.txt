@@ -119,7 +119,7 @@ Part II: Simplifying loops and logic
         The ternary operator: should use only when choosing between two simple values
         Avoid using do/while loop. It's just unnatural. Using while instead
         Minimize nesting:
-            Avoid using if withing if withing if ...
+            Avoid using if within if within if ...
             Look at the code from fresh perspective when youre making changes,do not
             sacrifies the readability for clean diff.
             Removing nesting by returning early

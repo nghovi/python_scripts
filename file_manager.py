@@ -44,7 +44,7 @@ def standardize_file_name(folder_path):
     for fp_i in file_paths:
         if isdir(fp_i):
             standardize_file_name(fp_i)
-        rename(fp_i, ' ', '_','-', '_','A','a','B','b','C','c','D','d','E','e','F','f',
+        rename_file(fp_i, ' ', '_','-', '_','A','a','B','b','C','c','D','d','E','e','F','f',
                 'G','g','H','h','I','i','J','j','K','k','L','l','M','m','N','n','O',
                 'o','P','p','Q','q','R','r','S','s','T','t','U','u','V','v','W','w',
                 'X','x','Y','y','Z','z')
