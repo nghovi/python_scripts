@@ -136,11 +136,12 @@ Part II: Simplifying loops and logic
         Breaking down giant statements: Dont Repeat Yourself :D
         Another Creative Way to Simplify Expressions: C++ macro, all for readability
     Chapter 9: Variables and readability
-        Eliminating variables:
-            Useless temporary variables
-            Eliminating intermediate results
+        Eliminating variables: (by return early or create new func)
+            Useless temporary variables 
+            Eliminating intermediate results 
             Eliminating control flow variables
         Shrink the scope of varialbes: make vars visible by as few lines of code as possible
+            Move class variable into function signature
             If statement scope in C++ (if PaymentInfo* info = database.ReadPaymentInfo)
             Creating Private variables in javascript: use a closure (Javascript: the good part)
             Javascript global scope: Always use var for local variable
@@ -185,6 +186,27 @@ Part IV: Selected Topics
     Chapter 15: Designing and implementing a minute/hour counter: I'm so trivial. I'm a journey man, not a master.
 
 
+
+The Pragmatic Programmer
+Chapter1 A pragmatic philosophy
+    The cat ate my source code:
+        Tip3: provide options, don't make lame excuse
+    Software entropy: A broken window vs Putting out fires
+        Tip4: don't live with a broken window
+    Stone soup and boiled frogs:
+        Tip5: Be a catalyst for change: for the soldiers
+        Tip6: Remember the big picture: for the villagers
+    Good-enough software:
+        Tip7: Make quality a requirements issue
+    Your knowledge portfolio:
+        Tip8: Invest regularly in your knowledge portfolio
+        Tip9: Critically analyze what you read and hear
+    Communicate:
+        Know what you want to say
+        Know your audience
+        Choose your moment/Choose a style/make it look good/involve your audience/be a listener/get back to people
+        Tip10: It's both what you say and the way you say it
+Chapter2 A pragmatic approach
 
 q: InnoDB and MyISam ?
 q: int(5), char(23), var_char(200) ? in sql mean 5 byte ?
