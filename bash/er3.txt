@@ -1,0 +1,2 @@
+Error : Number are not supplied
+Usage : ./test2.sh number1 number2
