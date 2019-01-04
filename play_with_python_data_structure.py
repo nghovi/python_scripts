@@ -1,5 +1,6 @@
 #!/usr/bin/python
-# LIST##############################################
+
+# LIST
 a = [66.25, 333, 333, 1, 1234.5]
 print a.count(333), a.count(1234.5), a.count('x')
 a.insert(2, -1)
@@ -15,9 +16,9 @@ a.reverse()
 print a
 a.sort()  # asc
 print a
-a.remove(333)  # remove first 2 in the list
+a.remove(333)  
 print a
-del a[:2]
+del a[:2] # remove first 2 in the list
 print a
 
 print "Using list as a stack with append and pop"
@@ -72,6 +73,7 @@ zipped_matrix = [[row[i] for row in matrix] for i in range(4)]
 print zipped_matrix
 
 
+# Tuple
 print "Tuple is a special data of python, it's immutable, sequence of value separated by comma"
 my_full_name = 'nguyen', 'hoang', 'viet'
 print my_full_name
@@ -81,6 +83,7 @@ print birthday
 last, middle, first = my_full_name
 print "My first name is", first
 
+# Set
 print "A set is an unordered collection with no duplicate elements"
 set1 = set('asdfsjfrisfa')
 set2 = set("slfjiowflalskfasdf")
@@ -98,6 +101,8 @@ print set4
 
 
 # Dictionary
+# If using dict(): no need to quotation key
+# If using curly bracket: Need to quote key
 print "Dictionary = hash in perl"
 me = {'age': 24, 'name': "viet", 'sex': 'male'}
 me.get('age')  # can return None
@@ -106,8 +111,6 @@ me.keys
 me['height'] = 186
 del me['height']
 
-me = dict(name='viet')
-print me
 quan = dict(age=24, name='quan', sex='male')
 print quan
 
